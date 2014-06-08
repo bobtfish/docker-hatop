@@ -8,5 +8,6 @@ RUN apt-get update -qq -y && \
     apt-get clean
 
 
-ENTRYPOINT ["/usr/bin/hatop -s /var/run/haproxy.sock"]
+ENTRYPOINT ["/usr/bin/hatop"]
+CMD ["-s", "/socket/haproxy.sock"]
 
